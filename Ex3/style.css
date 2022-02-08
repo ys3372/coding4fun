@@ -19,7 +19,7 @@ body{background: rgb(2,0,36);
     float:left;
     width: 45%;
     height: 100%;
-    padding: 30px 48px;
+    padding: 30px 40px;
   }
 
 .right {
@@ -27,7 +27,7 @@ body{background: rgb(2,0,36);
     float:right;
     width: 45%;
     height: 100%;
-    padding: 30px 24px;
+    padding: 30px 20px;
   }
 
   p:hover {
@@ -54,14 +54,14 @@ a{color:aqua}
   float:left;
   width: 45%;
   height: 100%;
-  padding: 30px 48px;
+  padding: 30px 40px;
   }
 
 .arthur_right{    display: inline-block;
   float:right;
   width: 45%;
   height: 100%;
-  padding: 30px 24px;}
+  padding: 30px 20px;}
 
 
 .arthur_right:hover{
