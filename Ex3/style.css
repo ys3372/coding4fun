@@ -65,7 +65,7 @@ a{color:aqua}
 
 
 .arthur_right:hover{
-  background: url("../Lina-Bo-Bardi1946.jpg") 40% no-repeat;
+  background: url("../image/Lina-Bo-Bardi1946.jpg") 40% no-repeat;
   background-size: auto 90%;
   font-size: 14pt;
     color:rgb(0, 0, 0);
@@ -74,7 +74,7 @@ a{color:aqua}
 }
 
 .arthur_left:hover{
-  background: url("../Lina-Bo-Bardi1946.jpg") 40% no-repeat;
+  background: url("../image/Lina-Bo-Bardi1946.jpg") 40% no-repeat;
   background-size: auto 90%;
   font-size: 14pt;
     color:rgb(0, 0, 0);

@@ -1,7 +1,6 @@
 body{background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,68,160,1) 50%, rgba(0,255,123,1) 80%);
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: large;
     color:hsl(340, 73%, 59%)
 }
 
@@ -34,7 +33,7 @@ body{background: rgb(2,0,36);
   }
   .arthur{
     background: transparent;
-    background: url("../YiningPortfolio/image/mypic.jpg") 40% no-repeat;
+    background: url("../vanishing/image/Lina-Bo-Bardi-on-the-ship-Almirante-Jaceguay-on-her-way-to-Brasil-in-1946.jpg") 40% no-repeat;
     background-size: auto 100%;
     border-radius: 1px;
     padding: 0px 0px 0px 0px;
