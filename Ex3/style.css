@@ -1,8 +1,8 @@
 body{background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,68,160,1) 50%, rgba(0,255,123,1) 80%);
     font-family: 'Open Sans Condensed', sans-serif;
-    color:hsl(340, 73%, 59%)
-}
+    color:hsl(340, 73%, 59%);
+   }
 
 .subtitle{
     background: rgba(0,255,123,1);
@@ -49,35 +49,28 @@ a{color:aqua}
   border: transparent 1pt rgb(255, 255, 255);
 }
 
-.arthur_left{
-  display: inline-block;
+.arthur_left,.arthur_right{
+  display:list-item;
   float:left;
-  width: 45%;
   height: 100%;
   padding: 30px 40px;
   }
 
-.arthur_right{    display: inline-block;
-  float:right;
-  width: 45%;
-  height: 100%;
-  padding: 30px 20px;}
-
-
-.arthur_right:hover{
-  background: url("../image/Lina-Bo-Bardi1946.jpg") 40% no-repeat;
-  background-size: auto 90%;
+.arthur_right:hover,.arthur_left:hover{
+  background: url("../image/Lina-Bo-Bardi1946.jpg") 70% no-repeat;
+  background-size: auto 180%;
   font-size: 14pt;
     color:rgb(0, 0, 0);
     background-color: rgba(255, 255, 255,.2);
     border: transparent 1pt rgb(255, 255, 255);
 }
 
-.arthur_left:hover{
-  background: url("../image/Lina-Bo-Bardi1946.jpg") 40% no-repeat;
-  background-size: auto 90%;
-  font-size: 14pt;
-    color:rgb(0, 0, 0);
-    background-color: rgba(255, 255, 255,.2);
-    border: transparent 1pt rgb(255, 255, 255);
+
+#container{
+  background-color: greenyellow;
+  width: 20%;
+}
+
+h3,h1{
+  text-transform: uppercase;
 }
