@@ -15,10 +15,13 @@ body{background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(6,68,160,1) 50%, 
     padding: 0px 2px;
     
   }
+.main{
+  display: flex;
+}
+
 
 .left,.right{
     display: inline-block;
-    width: 40%;
     height: 100%;
     padding: 30px 40px;
     flex-direction: column;
@@ -72,10 +75,16 @@ a{color:aqua}
     color:aliceblue
   }
 }
-@media only screen (max-width: 1200px) {
-  .left, .right {
-    flex-direction: row;
-    width: 80%;
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    height:60%;
+   }
+  .left{
+    width:100%;
+  } 
+  .right{
+    width:100%;
   }
 }
 
