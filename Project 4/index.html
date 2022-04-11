@@ -1,38 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project04</title>
+    <meta name="author" content="Yining Shen">
+    <meta name="description" content="ARCH4988 Course Works Spring2022">
+    <title>DataVisualizationGallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-  </head>
+</head>
+
+
   <body>
+    <div><a class="back" href="../index.html">Back to </a></div>
+    <h1 align="center">Data Visualization Gallery</h1>
+        <div class="container">
+        <nav>
+            <ul id = "menu">
+            <input class = "catagory" type="button" value="GIS" onclick="findPicByTag('GIS')"/>
+            <input class = "catagory" type="button" value="Python" onclick="findPicByTag('Python')"/>
+            <input class = "catagory" type="button" value="Grasshopper" onclick="findPicByTag('Grasshopper')"/>
+            <input class = "catagory" type="button" value="Physical Models" onclick="findPicByTag('Physical Models')"/>
+            <input class = "catagory" type="button" value="R" onclick="findPicByTag('Others')"/>
 
-    <h1 align="center">Irezumi Collection</h1>
+            <div id="searchBar">
+            <input type='text' class="searchBar" id='picTagText' placeholder="search for a keyword"/>
+            <input type="button"  class="searchButton" value="Search" onclick="findPic()"/><br>
+            </div>
+            </ul>
+        </nav>
 
-    <div class="container">
-  <nav>
-    <ul id = "menu">
+        <div class="content">
+          <a class="chart1" href="../Project 4/charts/1.png">
+            <div class = "code">
+                  # Import dataset
+                  <br/>
+                  midwest = pd.read_csv("https://raw.githubusercontent.com/selva86/datasets/master/midwest_filter.csv")
 
-    <input class = "catagory" type="button" value="Animals" onclick="findPicByTag('Animals')"/>
-    <input class = "catagory" type="button" value="Mythological Creatures" onclick="findPicByTag('Mythological Creatures')"/>
-    <input class = "catagory" type="button" value="Gods and Demons" onclick="findPicByTag('Gods and Demons')"/>
-    <input class = "catagory" type="button" value="Characters" onclick="findPicByTag('Characters')"/>
-    <input class = "catagory" type="button" value="Others" onclick="findPicByTag('Others')"/><br>
+                  # Prepare Data
+                  # Create as many colors as there are unique midwest['category']
+                  categories = np.unique(midwest['category'])
+                  colors = [plt.cm.tab10(i/float(len(categories)-1)) for i in range(len(categories))]
 
-    <div id="searchBar">
-    <input type='text' class="searchBar" id='picTagText' placeholder="search for a keyword"/>
-    <input type="button"  class="searchButton" value="Search" onclick="findPic()"/><br>
+                  # Draw Plot for Each Category
+                  plt.figure(figsize=(16, 10), dpi= 80, facecolor='w', edgecolor='k')
+
+                  for i, category in enumerate(categories):
+                      plt.scatter('area', 'poptotal',
+                                  data=midwest.loc[midwest.category==category, :],
+                                  s=20, cmap=colors[i], label=str(category))
+                      # "c=" 修改为 "cmap="
+
+                  # Decorations
+                  plt.gca().set(xlim=(0.0, 0.1), ylim=(0, 90000),
+                                xlabel='Area', ylabel='Population')
+
+                  plt.xticks(fontsize=12); plt.yticks(fontsize=12)
+                  plt.title("Scatterplot of Midwest Area vs Population", fontsize=22)
+                  plt.legend(fontsize=12)    
+                  plt.show()    
+            </div>
+          </a>
+          <a class="chart2" href="../Project 4/charts/2.png"></a>
+          <a class="chart3" href="../Project 4/charts/3.png"></a>
+          <a class="chart4" href="../Project 4/charts/4.png"></a>  
+          <a class="chart5" href="../Project 4/charts/5.png"></a>
+        </div>
     </div>
 
-    </ul>
-  </nav>
-
+    <div id='picArea' class = "ShowPictures" align="center">@DataVisualizationGallery
     </div>
 
-    <div id='picArea' class = "ShowPictures" align="center"><h2>Click on Buttons or Use Search Bar for Pictures</h2><br><br><br><br>
-    </div>
   </body>
 
     <script src="pictures.js"></script>
