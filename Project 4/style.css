@@ -126,8 +126,8 @@ input:focus {
 }
 
 .ShowPictures{
+  justify-content: space-between;
   width: 90%;
-  height: 200px;
   padding: 50px 40px;
   margin: 10px;
 }
