@@ -1,0 +1,190 @@
+body{background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgb(242, 242, 242) 26%, rgba(105, 168, 190, 0.469) 33%, rgb(125, 180, 189) 40%, rgb(218, 218, 218) 100%) no-repeat
+    center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+
+  }
+  .iframe{
+    
+    display:flex;
+    height: 270px;
+    width: 200px;
+    font-size: 14pt;
+    margin:10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255,.2);
+    border: transparent 1pt rgb(255, 255, 255);
+  }
+  .graph{
+    display:flex;
+    height: 270px;
+    width: 200px;
+    font-size: 14pt;
+    margin:10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255,.2);
+    border: transparent 1pt rgb(255, 255, 255);
+  }
+
+  .graph_content{
+    display:flex;
+    height: 270px;
+    width: 420px;
+    font-size: 14pt;
+    margin:10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255,.2);
+    border: transparent 1pt rgb(255, 255, 255);
+  }
+
+.chart{
+  display:flex;
+  width: 100%;
+  height: 300px;
+  background-size: 450px,300px;
+  font-size: 14pt;
+  background-color: rgba(255, 255, 255,.2);
+  border: transparent 1pt rgb(255, 255, 255);
+}
+
+
+h1 {
+  font-size: 72px;
+  font-family: 'Lato', sans-serif;
+}
+
+nav {
+  height: 5%;
+  width: 95%;
+  /* position: fixed; */
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.catagory {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    background: #7a6dd116;
+    border: .5px dashed rgb(0, 0, 0);
+    outline: none;
+    float: left;  
+    width: 12%;
+    height: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px;
+    line-height: 60px;
+}
+
+input:focus {
+    background: #7a6dd158;
+    /* color: #000; */
+}
+
+.container {
+  display: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 40px;
+  width: 95%;
+  /* line-height: 1.68; */
+}
+.container_viewer {
+  display: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 0px 40px;
+  width: 95%;
+  /* line-height: 1.68; */
+}
+
+.video-element {
+  width: 50%;
+}
+
+.searchBar {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  background: #7a6dd116;
+  border: .5px solid rgb(0, 0, 0);
+  outline: none;
+  float: left;  
+  width: 12%;
+  height: 10%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 10px;
+  line-height: 60px;
+}
+
+.searchButton {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  background: #7a6dd116;
+  border: .5px dashed rgb(0, 0, 0);
+  outline: none;
+  float: left;  
+  width: 12%;
+  height: 10%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 10px;
+  line-height: 60px;
+}
+
+.ShowPictures{
+  justify-content: space-between;
+  width: 90%;
+  padding: 50px 40px;
+  margin: 10px;
+}
+
+.code{
+  @import url ('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap')
+  font-family: 'Lato', sans-serif;
+  display:inline-block;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.225);
+  overflow: scroll;
+  height: 250px;
+  width:60%;
+  position: absolute;left:500px;
+  font-size: 12pt;
+  margin:10px 10px 10px 10px;
+  padding:30px 0px 0px 30px;
+  background-color: rgba(255, 255, 255, 0.603);
+  border: transparent 1pt rgb(255, 255, 255);
+}
+
+.code:hover{
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display:inline-block;
+  text-align: left;
+  color: black;
+  overflow: scroll;
+  height: 250px;
+  width:60%;
+  position: absolute;left:500px;
+  font-size: 12pt;
+  margin:10px 10px 10px 10px;
+  padding:30px 0px 0px 30px;
+  background-color: rgba(255, 255, 255, 0.603);
+  border: transparent 1pt rgb(255, 255, 255);
+}
+
