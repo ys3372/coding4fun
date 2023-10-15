@@ -19,13 +19,20 @@
 
     <h1 align="center">数据看板</h1>
     <div class="container_viewer"></div>
+    
+      <video id="local-video" autoplay playsinline></video>
+      <button id="showVideo">打开摄像头</button>
+      <p>通过getUserMedia()获取视频</p>
+    
+
       <iframe style="width: 700px;height: 400px;" src="https://www.bilibili.com/blackboard/live/live-activity-player.html?cid=25430088&quality=0" 
         frameborder="no" framespacing="0" scrolling="no" allow="autoplay; encrypted-media" allowfullscreen="true">
       </iframe>
       <br>
-      <video controls class="video-element">
-        <source src="..\src\video\房间可视化.mp4" type="video/mp4">
-      </video>
+
+      <iframe src="//player.bilibili.com/player.html?aid=772598529&bvid=BV1D14y1W7qp&cid=819126853&p=12" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+      <br>
+
       <video controls class="video-element">
         <source src="..\src\video\房间可视化.mp4" type="video/mp4">
       </video>
@@ -63,7 +70,7 @@
   
 <br>
 <br>
-      <div class="container">
+    <div class="container">
 
 
         <div class="content">
@@ -219,7 +226,27 @@
 
   </body>
 
+  <script>
+    const constraints = 
+    {
+      audio: false,
+      video: true
+    }
+    // 处理打开摄像头成功
+    function handleSuccess(stream)
+    {
+      const video = document.querySelector("#local-video");
+      video.srcObject = stream;
+    }
+    function handleError(error)
+    {
+      console.error("getUserMedia error: " + error);
+    }
+    function onOpenCamera(e)
+    {
+      navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(nul1);
+    }
+    document.querySelector("#showVideo").addEventListener("click", onOpenCamera);
+  </script>
   <script src="search.js"></script>
-
-
 </html>
