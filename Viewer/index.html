@@ -24,7 +24,10 @@
       <button id="showVideo">打开摄像头</button>
       <p>通过getUserMedia()获取视频</p>
     
-
+      <audio id="local-audio" autoplay controls>播放麦克风声音</audio>
+      <button id="playAudio">打开麦克风</button>
+      <p>通过getUserMedia()获取音频<p>
+      
       <iframe style="width: 700px;height: 400px;" src="https://www.bilibili.com/blackboard/live/live-activity-player.html?cid=25430088&quality=0" 
         frameborder="no" framespacing="0" scrolling="no" allow="autoplay; encrypted-media" allowfullscreen="true">
       </iframe>
@@ -71,8 +74,6 @@
 <br>
 <br>
     <div class="container">
-
-
         <div class="content">
           <a class="chart" >
 
@@ -229,8 +230,8 @@
   <script>
     const constraints = 
     {
-      audio: false,
-      video: true
+      audio: true,
+      video: {width: 680, height: 240}
     }
     // 处理打开摄像头成功
     function handleSuccess(stream)
@@ -244,9 +245,14 @@
     }
     function onOpenCamera(e)
     {
-      navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(nul1);
+      navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(null);
     }
-    document.querySelector("#showVideo").addEventListener("click", onOpenCamera);
+    function onOpenMicrophone(e)
+    {
+      navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(null);
+    }
+    //document.querySelector("#showVideo").addEventListener("click", onOpenCamera);
+    document.querySelector("#playAudio").addEventListener("click", onOpenMicrophone);
   </script>
   <script src="search.js"></script>
 </html>
